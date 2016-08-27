@@ -1,0 +1,20 @@
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+
+.active{
+    background: #FFFFFF;
+    border-bottom: 1px #FFFFFF solid;
+}
+
+.triangle{
+    display: inline-block;
+    border-top: 5px solid #74BF1F;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid transparent;
+}

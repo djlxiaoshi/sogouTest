@@ -6,15 +6,41 @@
     float: right;
 }
 
+.clearfix:before,.clearfix:after {
+  content:"";
+  display:table;
+}
+.clearfix:after {
+    clear:both;
+    overflow:hidden;
+}
+.clearfix {
+    zoom:1; /* IE < 8 */
+}
+
+.inline_block{
+    display: inline-block;
+}
+
 .active{
     background: #FFFFFF;
     border-bottom: 1px #FFFFFF solid;
 }
 
-.triangle{
+.gray_word{
+    color: #999999;
+}
+
+@mixin triangle($size,$color,$angle){
     display: inline-block;
-    border-top: 5px solid #74BF1F;
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid transparent;
+    border-top: $size solid $color;
+    border-right: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid transparent;
+    transform: rotate($angle);
+}
+
+@mixin text-center($lineHeight){
+    line-height: $lineHeight;
+    text-align: center;
 }

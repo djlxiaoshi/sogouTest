@@ -8,18 +8,44 @@ a {
 ul, li {
   list-style: none; }
 
-body {
+html {
   font-family: arial;
   font-size: 12px; }
 
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table; }
+
+.clearfix:after {
+  clear: both;
+  overflow: hidden; }
+
+.clearfix {
+  zoom: 1;
+  /* IE < 8 */ }
+
+.inline_block {
+  display: inline-block; }
+
+.active {
+  background: #FFFFFF;
+  border-bottom: 1px #FFFFFF solid; }
+
+.gray_word {
+  color: #999999; }
+
 .index_header {
   width: 100%;
-  height: 32px;
-  background: #80C269;
-  border-bottom: 1px solid #64B112; }
+  background: #80C269; }
   .index_header .header_nav {
     width: 900px;
-    height: 100%;
+    height: 32px;
     margin: 0 auto; }
     .index_header .header_nav ul {
       font-size: 0; }
@@ -44,6 +70,12 @@ body {
         color: #000;
         border-right: 0; }
       .index_header .header_nav .header_nav_left li .header_triangle {
+        display: inline-block;
+        border-top: 5px solid #74BF1F;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 5px solid transparent;
+        transform: rotate(0);
         position: absolute;
         bottom: -3px;
         left: 49%;
@@ -64,7 +96,8 @@ body {
   .index_header .header_bottom {
     width: 100%;
     height: 230px;
-    background: linear-gradient(#fff, #fff 165px, #F2F0F2); }
+    background: linear-gradient(#fff, #fff 145px, #F2F0F2);
+    overflow: hidden; }
     .index_header .header_bottom .container {
       width: 900px;
       margin: 0 auto;
@@ -77,6 +110,7 @@ body {
       .index_header .header_bottom .container .container_left .logo span {
         color: #6AA131; }
       .index_header .header_bottom .container .container_left .header_serch {
+        margin-top: 10px;
         border: 5px solid #88C750;
         position: relative; }
         .index_header .header_bottom .container .container_left .header_serch input[type=text] {
@@ -93,8 +127,6 @@ body {
           outline: none; }
       .index_header .header_bottom .container .container_left .header_radio {
         margin-top: 10px; }
-        .index_header .header_bottom .container .container_left .header_radio input[type=radio] {
-          background: red; }
       .index_header .header_bottom .container .container_left .description {
         margin-top: 10px; }
         .index_header .header_bottom .container .container_left .description div {
@@ -102,20 +134,85 @@ body {
           width: 10px;
           height: 10px;
           background: red; }
+      .index_header .header_bottom .container .container_right {
+        width: 340px;
+        height: 172px;
+        border: 1px solid #D7D7D7; }
+        .index_header .header_bottom .container .container_right ul {
+          width: 100%;
+          font-size: 0; }
+          .index_header .header_bottom .container .container_right ul li {
+            width: 50%;
+            height: 30px;
+            font-size: 1rem;
+            line-height: 30px;
+            text-align: center;
+            display: inline-block;
+            box-sizing: border-box;
+            position: relative;
+            border: 1px solid #D7D7D7; }
+            .index_header .header_bottom .container .container_right ul li a {
+              color: #000; }
+            .index_header .header_bottom .container .container_right ul li .tab_trangle {
+              display: inline-block;
+              border-top: 5px solid #74BF1F;
+              border-right: 5px solid transparent;
+              border-bottom: 5px solid transparent;
+              border-left: 5px solid transparent;
+              transform: rotate(0);
+              position: absolute;
+              bottom: -3px;
+              left: 49%;
+              left: calc(50% - 5px); }
+          .index_header .header_bottom .container .container_right ul .tab_active {
+            border-bottom: none; }
+          .index_header .header_bottom .container .container_right ul .content {
+            font-size: 1rem;
+            margin-top: 25px; }
+            .index_header .header_bottom .container .container_right ul .content .content_img {
+              width: 120px;
+              height: 88px;
+              border: 3px solid #3C3C3C;
+              margin-left: 14px; }
+            .index_header .header_bottom .container .container_right ul .content .content_text {
+              width: 164px; }
+              .index_header .header_bottom .container .container_right ul .content .content_text p {
+                margin-top: 10px;
+                line-height: 1.5rem; }
+                .index_header .header_bottom .container .container_right ul .content .content_text p:first-child {
+                  margin-top: 0; }
+              .index_header .header_bottom .container .container_right ul .content .content_text .content_text_word span {
+                font-size: 2rem;
+                font-weight: bold; }
+                .index_header .header_bottom .container .container_right ul .content .content_text .content_text_word span:first-child {
+                  padding-right: 10px; }
 
-.fl {
-  float: left; }
+.index_main {
+  width: 900px;
+  margin: 0 auto;
+  margin-top: 30px; }
 
-.fr {
-  float: right; }
-
-.active {
-  background: #FFFFFF;
-  border-bottom: 1px #FFFFFF solid; }
-
-.triangle {
-  display: inline-block;
-  border-top: 5px solid #74BF1F;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 5px solid transparent; }
+.index_main_article {
+  width: 467px;
+  height: 300px;
+  border: 1px solid red; }
+  .index_main_article .conversation_of_day .section_name {
+    margin-bottom: 10px; }
+  .index_main_article .conversation_of_day .conversation_content {
+    border: 1px solid #D0D0D0; }
+    .index_main_article .conversation_of_day .conversation_content .title {
+      height: 31px;
+      background: linear-gradient(#fff, #F6F6F6);
+      line-height: 31px;
+      color: #4F900B;
+      border-bottom: 1px solid #D0D0D0; }
+    .index_main_article .conversation_of_day .conversation_content li {
+      margin-top: 10px;
+      margin-bottom: 10px; }
+      .index_main_article .conversation_of_day .conversation_content li .speaker {
+        margin-left: 10px;
+        margin-right: 10px; }
+      .index_main_article .conversation_of_day .conversation_content li p .icon {
+        width: 12px;
+        height: 10px;
+        background: red; }

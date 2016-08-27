@@ -1,12 +1,11 @@
 .index_header{
     width: 100%;
-    height: 32px;
-    background: #80C269;
-    border-bottom: 1px solid #64B112;
+     background: #80C269;
     
     .header_nav{
         width: 900px;
-        height: 100%;
+        height: 32px;
+       
         margin: 0 auto;
         
         ul{font-size: 0;}
@@ -37,7 +36,6 @@
                 
                 &:last-child a{
                     border-right:0; 
-                    
                 }
                 
                 &:first-child a{
@@ -50,6 +48,7 @@
                 } 
                 
                 .header_triangle{
+                    @include triangle(5px,#74BF1F,0);
                     position: absolute;
                     bottom: -3px;
                     left: 49%;  //不支持calc
@@ -90,9 +89,11 @@
     .header_bottom{
         width: 100%;
         height: 230px;
-        background: linear-gradient(#fff,#fff 165px,#F2F0F2);//渐变
+        background: linear-gradient(#fff,#fff 145px,#F2F0F2);//渐变
+        overflow: hidden;
         
         .container{
+            
             width: 900px;
             margin: 0 auto;
             margin-top: 30px;
@@ -115,6 +116,7 @@
                 }
                 
                 .header_serch{
+                    margin-top: 10px;
                     border: 5px solid #88C750; 
                     position: relative;                  
                     input[type=text]{
@@ -140,7 +142,7 @@
                 .header_radio{
                     margin-top: 10px;
                     input[type=radio]{
-                        background: red;
+                        
                     }
                 }
                 
@@ -161,7 +163,74 @@
             }
             
             
-            .container_right{}
+            .container_right{
+                width: 340px;
+                height: 172px;
+                border: 1px solid #D7D7D7;
+                
+                ul{
+                    width: 100%;
+                    font-size: 0;
+                    li{
+                        width: 50%;
+                        height: 30px;
+                        font-size: 1rem;
+                        @include text-center(30px);
+                        display: inline-block;                       
+                        box-sizing: border-box;
+                        position: relative;
+                        border: 1px solid #D7D7D7;
+                        a{
+                            color: #000;
+                        }
+                        
+                        .tab_trangle{
+                            @include triangle(5px,#74BF1F,0);
+                            position: absolute;
+                            bottom: -3px;
+                            left: 49%;  //不支持calc
+                            left: calc(50% - 5px);
+                            
+                        }
+                    }
+                    
+                    .tab_active{
+                        border-bottom: none;
+                    }
+                    
+                    .content{
+                        font-size: 1rem;
+                        margin-top: 25px;
+                        .content_img{
+                            width:120px ;
+                            height: 88px;
+                            border: 3px solid #3C3C3C;
+                            margin-left: 14px;
+                        }
+                        
+                        .content_text{
+                            width: 164px;
+                            p{
+                                margin-top: 10px;
+                                line-height: 1.5rem;
+                                &:first-child{
+                                    margin-top: 0;
+                                }
+                            }
+                            .content_text_word{
+                                span{
+                                    font-size: 2rem;
+                                    font-weight: bold;
+                                    &:first-child{
+                                        padding-right: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
         }
         
         
